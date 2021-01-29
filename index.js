@@ -3,13 +3,13 @@ const symbols = {
     type: 'boolean',
     precedence: 0,
     associativity: null,
-    regex: /^true/i
+    regex: /^t(rue)?/i
   },
   false: {
     type: 'boolean',
     precedence: 0,
     associativity: null,
-    regex: /^false/i
+    regex: /^f(alse)?/i
   },
   not: {
     type: 'operator',

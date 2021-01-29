@@ -4,11 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boolean Algebra Solver</title>
+
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 50vw;
+    }
+
+    input {
+      font-size: 3em;
+    }
+
+    pre {
+      font-size: 3em;
+      overflow-x: auto;
+    }
+  </style>
 </head>
 <body>
-  <input id="in"/>
-  <button id="buddon">Solve</button>
-  <pre id="out"></pre>
-  <script src="index.js"></script>
+  <div>
+    <input id="in"/>
+    <button id="buddon">Solve</button>
+    <pre id="out">Please enter fomulae</pre>
+    <script src="index.js"></script>
+  </div>
 </body>
 </html>
