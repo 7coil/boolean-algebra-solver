@@ -187,11 +187,28 @@ Expected ${exepcted}, got ${actual}
 
 const output = document.getElementById('out');
 const input = document.getElementById('in');
-const buddon = document.getElementById('buddon');
-buddon.addEventListener('click', () => {
-  try {
-    output.innerText = solve(shunt(parse(input.value)));
-  } catch(e) {
-    output.innerText = e.message + '\n' + e.stack;
+// const buddon = document.getElementById('buddon');
+
+document.addEventListener('load', () => {
+  input.value = '';
+  output.value = '';
+})
+
+input.addEventListener('input', () => {
+  if (input.value === '') {
+    output.value = ''
+    return;
   }
+
+  try {
+    output.value = solve(shunt(parse(input.value)));
+  } catch(e) {
+    output.value = e.message + '\n' + e.stack;
+  }
+})
+
+output.addEventListener('click', () => {
+  output.select()
+  output.setSelectionRange(0, 99999);
+  document.execCommand('copy');
 })

@@ -12,13 +12,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     div {
       display: flex;
       flex-direction: column;
       text-align: center;
-      width: 50vw;
+      width: 70vw;
+      gap: 0.5em;
     }
 
     input {
@@ -33,10 +35,13 @@
 </head>
 <body>
   <div>
-    <input id="in"/>
-    <button id="buddon">Solve</button>
-    <pre id="out">Please enter fomulae</pre>
+    <h1>Boolean Algebra Solver</h1>
+    <p>Uses Djikstra's Shunting Yard algorithm to calculate the value of a boolean expression.</p>
+    <input id="in" value="" autocomplete="off" placeholder="Enter formulae here"/>
+    <input id="out" value="" autocomplete="off" placeholder="Click output (this box) to copy!" />
     <script src="index.js"></script>
+    <a href="https://github.com/7coil/boolean-algebra-solver/">GitHub</a>
+    <a href="https://leondrolio.com">leondrolio.com</a>
   </div>
 </body>
 </html>
